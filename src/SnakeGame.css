@@ -1,0 +1,113 @@
+.snake-game-container {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.score-display {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.score {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.game-area {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(45deg, #2c3e50, #34495e);
+    margin: 20px auto;
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.snake-segment {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #2ecc71;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.food {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-over {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 250px;
+    font-family: 'Arial', sans-serif;
+}
+
+.restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.restart-button:hover {
+    background-color: #2ecc71;
+}
+
+.mobile-controls {
+    margin-top: 20px;
+}
+
+.mobile-controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.5rem;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mobile-controls button:hover {
+    background-color: #2c3e50;
+}
+
+.quests-and-rewards {
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+.quests-and-rewards h2 {
+    font-size: 1.8rem;
+}
+
+.quests-and-rewards ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quests-and-rewards li {
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
