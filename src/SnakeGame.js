@@ -116,22 +116,38 @@ const SnakeGame = () => {
     }, [direction]);
 
     const getQuestsAndRewards = () => {
-        if (score >= 50) {
-            return [
-                { quest: "Collect 5 more food items", reward: "Double Score!" },
-                { quest: "Survive for 2 minutes", reward: "Speed Boost" }
-            ];
-        } else if (score >= 20) {
-            return [
-                { quest: "Collect 3 more food items", reward: "Extra Life" },
-                { quest: "Reach a score of 50", reward: "Unlock New Skin" }
-            ];
-        } else {
-            return [
-                { quest: "Eat 1 more food item", reward: "5 Extra Points" },
-                { quest: "Survive for 30 seconds", reward: "Increase Speed" }
-            ];
-        }
+        return [
+            { quest: "Level 1 (200 XP)", reward: "Snake Fancy Hat"},
+            { quest: "Level 2 (400 XP)", reward: "Snake Silly Hat"},
+            { quest: "Level 3 (600 XP)", reward: "Snake Cyber Hat"},
+            { quest: "Level 4 (800 XP)", reward: "Snake Cowboy Hat"},
+            { quest: "Level 5 (999 XP)", reward: "Snake Turban Hat + 500 Snake Oil"},
+            { quest: "Get a score of 100", reward: "50 Snake oil"},
+            { quest: "Get a score of 200", reward: "100 Snake oil"},
+            { quest: "Get a score of 300", reward: "100 Snake oil"},
+            { quest: "Get a score of 400", reward: "100 Snake oil"},
+            { quest: "Get a score of 500", reward: "100 Snake oil"},
+            { quest: "Get a score of 600", reward: "100 Snake oil"},
+            { quest: "Get a score of 700", reward: "100 Snake oil"},
+            { quest: "Get a score of 800", reward: "100 Snake oil"},
+            { quest: "Get a score of 900", reward: "100 Snake oil"},
+        ]
+        // if (score >= 50) {
+        //     return [
+        //         { quest: "Collect 5 more food items", reward: "Double Score!" },
+        //         { quest: "Survive for 2 minutes", reward: "Speed Boost" }
+        //     ];
+        // } else if (score >= 20) {
+        //     return [
+        //         { quest: "Collect 3 more food items", reward: "Extra Life" },
+        //         { quest: "Reach a score of 50", reward: "Unlock New Skin" }
+        //     ];
+        // } else {
+        //     return [
+        //         { quest: "Eat 1 more food item", reward: "5 Extra Points" },
+        //         { quest: "Survive for 30 seconds", reward: "Increase Speed" }
+        //     ];
+        // }
     };
 
     return (
