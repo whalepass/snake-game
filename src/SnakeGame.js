@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './SnakeGame.css';
+import axios from 'axios';
 
 const SnakeGame = () => {
     const [snake, setSnake] = useState([{ x: 10, y: 10 }]);
@@ -114,6 +115,40 @@ const SnakeGame = () => {
         window.addEventListener('keydown', handleKeyPress);
         return () => window.removeEventListener('keydown', handleKeyPress);
     }, [direction]);
+
+    useEffect(() => {
+        // Check if 'playerId' is already set in localStorage
+        let playerId = localStorage.getItem('playerId');
+    
+        // If 'playerId' is not set, generate one and save it to localStorage
+        if (!playerId) {
+          playerId = crypto.randomUUID();  // or use another method to generate playerId
+          localStorage.setItem('playerId', playerId);
+          console.log('Set new playerId:', playerId);
+        } else {
+          console.log('Existing playerId:', playerId);
+        }
+    
+        // Set the gameId, assuming you have it from somewhere
+        const gameId = "77c6eda1-be06-451b-a261-dadb53664299";  // Replace this with the actual game ID
+    
+        // Now make the POST request to enroll the player
+        axios.post('https://api.whalepass.gg/enrollments', {
+          playerId: playerId,
+          gameId: gameId
+        }, {
+            headers: {
+                "X-API-KEY": "1fab137e5fa57ad731cb510e41bfe595"
+            }
+        })
+        .then(response => {
+          console.log('Enrollment successful:', response.data);
+        })
+        .catch(error => {
+          console.error('Error during enrollment:', error);
+        });
+        
+      }, []); // Empty array ensures this effect runs only once on mount
 
     const getQuestsAndRewards = () => {
         return [
